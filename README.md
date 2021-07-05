@@ -26,3 +26,10 @@ As soon as you have all the sqllite files you can start the web interface from t
 
 The URL of the new web interface is printed out on the screen, copy that to your browser.
 
+## Known issues
+
+Once again: the project is in the proof of concept phase, it has many issues, I just menton the worst issues here:
+ * Only the last 24h of data converted into the sqlite DB, therefore only that can be displayed
+ * The data is not refreshed, you have to run the `rrd2sqlite.py` manually time to time (and I don't suggest to schedule it as it uses lot of CPU power)
+ * The negative values are not displayed correclty (eg: network traffic: in/out both displayed as positive)
+ * Very much not final web interface (knonw as "ugly"), but good enough to see the graphs
